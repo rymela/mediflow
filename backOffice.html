@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>MediFlow Mag | CMS Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "secondary-fixed": "#d6e3ff",
+                    "secondary": "#4a5f83",
+                    "inverse-surface": "#2d3133",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e0e3e5",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#87f8ea",
+                    "on-primary-fixed-variant": "#00468c",
+                    "error": "#ba1a1a",
+                    "inverse-on-surface": "#eff1f3",
+                    "surface-container-highest": "#e0e3e5",
+                    "on-primary-container": "#dae5ff",
+                    "tertiary-fixed": "#84f5e8",
+                    "secondary-fixed-dim": "#b2c7f1",
+                    "primary-container": "#1565c0",
+                    "background": "#f7f9fb",
+                    "surface": "#f7f9fb",
+                    "outline": "#727783",
+                    "inverse-primary": "#a9c7ff",
+                    "error-container": "#ffdad6",
+                    "surface-bright": "#f7f9fb",
+                    "on-secondary-container": "#475c80",
+                    "on-tertiary-fixed-variant": "#005049",
+                    "surface-container": "#eceef0",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#001b3d",
+                    "on-tertiary-fixed": "#00201d",
+                    "tertiary": "#005851",
+                    "surface-tint": "#005db7",
+                    "on-secondary-fixed-variant": "#32476a",
+                    "tertiary-container": "#00736a",
+                    "secondary-container": "#c0d5ff",
+                    "primary-fixed-dim": "#a9c7ff",
+                    "on-secondary-fixed": "#021b3c",
+                    "surface-container-high": "#e6e8ea",
+                    "on-background": "#191c1e",
+                    "on-surface": "#191c1e",
+                    "outline-variant": "#c2c6d4",
+                    "on-tertiary": "#ffffff",
+                    "surface-dim": "#d8dadc",
+                    "tertiary-fixed-dim": "#66d9cc",
+                    "primary": "#004d99",
+                    "primary-fixed": "#d6e3ff",
+                    "on-surface-variant": "#424752",
+                    "surface-container-low": "#f2f4f6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar -->
+<aside class="h-screen w-64 fixed left-0 top-0 bg-slate-50 dark:bg-slate-950 flex flex-col border-r border-slate-100 dark:border-slate-800 z-40">
+<div class="px-6 py-8">
+<div class="text-lg font-bold text-blue-900 dark:text-blue-50">Admin Panel</div>
+<div class="text-xs text-slate-500 font-label">MediFlow CMS</div>
+</div>
+<nav class="flex-1 px-2 space-y-1">
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-label">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 text-blue-700 dark:text-teal-400 font-bold border-r-4 border-teal-500 bg-blue-50 dark:bg-blue-900/20 px-4 py-3 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="article">article</span>
+<span class="font-label">Content Library</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+<span class="font-label">Moderation Queue</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label">Analytics</span>
+</a>
+<a class="flex items-center gap-3 text-slate-500 dark:text-slate-400 px-4 py-3 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-label">Settings</span>
+</a>
+</nav>
+<div class="p-6">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3 px-4 rounded-lg font-semibold flex items-center justify-center gap-2 shadow-sm transition-all hover:scale-[0.98]">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+<span>Create Post</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="ml-64 min-h-screen p-10 space-y-10">
+<!-- Header & Action Row -->
+<header class="flex justify-between items-end">
+<div>
+<h1 class="text-4xl font-extrabold tracking-tight text-on-surface">Magazine Management</h1>
+<p class="text-on-surface-variant mt-2 text-lg">Control center for articles, research papers, and community interactions.</p>
+</div>
+<div class="flex gap-4">
+<div class="flex items-center bg-surface-container-low px-4 py-2 rounded-lg text-on-surface-variant">
+<span class="material-symbols-outlined mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-sm w-48" placeholder="Search posts..." type="text"/>
+</div>
+<div class="flex items-center gap-3 pl-4 border-l border-outline-variant/30">
+<div class="text-right hidden sm:block">
+<p class="text-sm font-bold text-on-surface truncate">Dr. Julian Vance</p>
+<p class="text-[10px] text-on-surface-variant truncate">Chief Editor</p>
+</div>
+<img alt="Admin Profile" class="w-10 h-10 rounded-full object-cover border-2 border-white shadow-sm" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkiFMakFo-OD0vPoMyRIAHLtqBfgwLksOoeIJO8DhrUSd3OjJBZcVOv-DMfzFY0PdKoZkceR6Ggjfvi4nuq30SFWFl9-q_xEZ9PpPtasNCHTub7VjdtIpPV_BtRMD-zxXcnXHCuEjJbTnSOaAoF1apKvrGxtGjNLfOYTu5bdmvvXLLAP8HMzI8sLnn7Zfqlud4PVDMPFUnkCEUrEF6bGVLPQJC-AjGbAWYhUJXSRxmqTfwHSw5f81oDauvfKO1wIuDjijofaaAsqI"/>
+</div></div>
+</header>
+<!-- Bento Layout: Post Management & Stats -->
+<div class="grid grid-cols-12 gap-8">
+<!-- Post List Section -->
+<div class="col-span-8 space-y-6">
+<div class="bg-surface-container-low rounded-xl p-6 space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-xl font-bold flex items-center gap-2">
+<span class="w-1 h-6 bg-tertiary rounded-full"></span>
+                            Active Publications
+                        </h2>
+<span class="text-xs font-bold text-primary bg-primary-fixed px-3 py-1 rounded-full">124 TOTAL</span>
+</div>
+<div class="space-y-1">
+<!-- Post Item 1 -->
+<div class="group flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-4">
+<img alt="Post Thumbnail" class="w-14 h-14 rounded-lg object-cover" data-alt="microscopic view of neural networks vibrant blue and teal glow high tech medical aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8mqmyBVnquEc1jiPd25M8mm0eTLn3Fcr9ungNMisV4ydtpdFZv9XDCrcG1RIq85sGfiIMoWmU4Wt6OB2nHowY3Ze18q1hAq4QvJochy-JQd4Qa0ZIQrPuWBA6NE-ZtHT2WfBLo4nT2TYfUp_KUs3Sm9t15RUlZnvWwOD3_5_aTk_yKwrzs5dZ7iTfxNMpXrv4pZx6iy27txQnT1AaLgXb88bTvstaQK4IBTkmlnXpbibjxQAgE14v7IA4HirOcixJhjd1fvJDEik"/>
+<div>
+<h3 class="font-bold text-on-surface">Advancements in Neural Plasticity</h3>
+<p class="text-xs text-on-surface-variant flex items-center gap-2">
+<span class="font-semibold text-tertiary">Research</span> • 2 hours ago • By Dr. Aris Thorne
+                                    </p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container-high rounded-md transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-error hover:bg-error-container/20 rounded-md transition-all">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<!-- Post Item 2 -->
+<div class="group flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-4">
+<img alt="Post Thumbnail" class="w-14 h-14 rounded-lg object-cover" data-alt="modern hospital atrium with lots of plants natural light clean architectural lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAa-C_4qS9_amZ7jsRQBah-ZecNT3P1XQ1Db9BHW3GyBrFuv_utNRbc8o2i5pCPRUVQt2Obj9IUea0jQqgL-QiecrgGMcjursz09IuCiJiVukL_1vJJu2xkMf88hYoCQR8DzPHx1ZREeWrxtRsqsLgudkx81blEpJGmSf9jJksRhVbXz62s4VtQboPW5FQzPExP1Y8NNPtMjNa1iQeyXBSW9qTjTJceU33934QUhauvdYkjQ01j1syvNpljoxS7iB0GM_G7ozlxh6Y"/>
+<div>
+<h3 class="font-bold text-on-surface">The Future of Sustainable Healthcare Infrastructure</h3>
+<p class="text-xs text-on-surface-variant flex items-center gap-2">
+<span class="font-semibold text-blue-600">Health News</span> • Yesterday • By Editorial Staff
+                                    </p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container-high rounded-md transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-error hover:bg-error-container/20 rounded-md transition-all">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+<!-- Post Item 3 -->
+<div class="group flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg hover:bg-slate-50 transition-colors">
+<div class="flex items-center gap-4">
+<img alt="Post Thumbnail" class="w-14 h-14 rounded-lg object-cover" data-alt="digital heart anatomy hologram medical illustration neon teal accents on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD57cqXHwUhJMPhDsKsskiLu1McvwFyfCiTSSOyN0VvZhd8g1V49Zx6P82c9ebCNLYDNR-lX69fTyeQlOOV8u1hshp60EK2JTJhMzsY6wMoW9aP5sccIAo_ldwDPWyR9cEvuptGM4YNJ_LDZIlklkD97eCGSsPsGp61N_7VAdIKs2wKFUnt05HkjSH_gZ9fennCAvDtT6pd0aCCTZ4cutNkCWMD8wzNm4ftOMMOTKEkiB5g10m7Jw94-LYRTxEMCtlojHpO9m6KxyE"/>
+<div>
+<h3 class="font-bold text-on-surface">Cardiovascular Robotics: A New Frontier</h3>
+<p class="text-xs text-on-surface-variant flex items-center gap-2">
+<span class="font-semibold text-tertiary">Journals</span> • 3 days ago • By Sarah Jenkins
+                                    </p>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<button class="p-2 text-on-surface-variant hover:text-primary hover:bg-surface-container-high rounded-md transition-all">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-error hover:bg-error-container/20 rounded-md transition-all">
+<span class="material-symbols-outlined" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+<button class="w-full py-3 text-sm font-semibold text-on-surface-variant border-2 border-dashed border-outline-variant rounded-lg hover:bg-surface-container-high transition-colors">
+                        View All Articles
+                    </button>
+</div>
+</div>
+<!-- Comment Moderation & Insights Section -->
+<div class="col-span-4 space-y-8">
+<!-- Comment Moderation -->
+<div class="bg-surface-container-low rounded-xl p-6 space-y-4">
+<div class="flex items-center justify-between">
+<h2 class="text-lg font-bold">Comment Moderation</h2>
+<span class="material-symbols-outlined text-tertiary" data-icon="gavel">gavel</span>
+</div>
+<div class="space-y-4">
+<!-- Comment 1 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border-l-2 border-tertiary shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary-container flex items-center justify-center text-[10px] font-bold text-on-secondary-container">ML</div>
+<span class="text-xs font-bold">Marcus_L</span>
+</div>
+<span class="text-[10px] text-on-surface-variant">4m ago</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-3">This data seems contradictory to the 2022 study. Can we get clarification on the sample size used?</p>
+<div class="flex gap-2">
+<button class="flex-1 py-1.5 text-[10px] font-bold rounded bg-surface-container text-on-surface hover:bg-surface-container-high">Warn</button>
+<button class="flex-1 py-1.5 text-[10px] font-bold rounded bg-error-container/30 text-error hover:bg-error-container/50">Delete</button>
+</div>
+</div>
+<!-- Comment 2 -->
+<div class="bg-surface-container-lowest p-4 rounded-lg border-l-2 border-tertiary shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-fixed flex items-center justify-center text-[10px] font-bold text-on-primary-fixed">JD</div>
+<span class="text-xs font-bold">JaneDoe_99</span>
+</div>
+<span class="text-[10px] text-on-surface-variant">12m ago</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-3">Great article! Very helpful for my thesis on neuro-rehabilitation.</p>
+<div class="flex gap-2">
+<button class="flex-1 py-1.5 text-[10px] font-bold rounded bg-surface-container text-on-surface hover:bg-surface-container-high">Warn</button>
+<button class="flex-1 py-1.5 text-[10px] font-bold rounded bg-error-container/30 text-error hover:bg-error-container/50">Delete</button>
+</div>
+</div>
+<!-- Comment 3 (Flagged) -->
+<div class="bg-error-container/10 p-4 rounded-lg border-l-2 border-error shadow-sm">
+<div class="flex justify-between items-start mb-2">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-error-container flex items-center justify-center text-[10px] font-bold text-on-error-container">!!</div>
+<span class="text-xs font-bold text-error">Suspected_Spam</span>
+</div>
+<span class="text-[10px] text-on-surface-variant">1h ago</span>
+</div>
+<p class="text-xs text-on-surface-variant leading-relaxed mb-3 italic">"Check out this link for cheap medical supplies..."</p>
+<div class="flex gap-2">
+<button class="flex-1 py-1.5 text-[10px] font-bold rounded bg-surface-container text-on-surface hover:bg-surface-container-high">Warn</button>
+<button class="flex-1 py-1.5 text-[10px] font-bold rounded bg-error text-on-error hover:opacity-90">Instant Delete</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Stats Vital Cards -->
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-surface-container-lowest p-5 rounded-xl border-t-2 border-tertiary-fixed shadow-sm">
+<p class="text-xs font-bold text-on-surface-variant mb-1">Weekly Views</p>
+<h4 class="text-2xl font-extrabold text-primary">42.8k</h4>
+<p class="text-[10px] text-tertiary mt-2 flex items-center">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="trending_up">trending_up</span> +12.4%
+                        </p>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl border-t-2 border-tertiary-fixed shadow-sm">
+<p class="text-xs font-bold text-on-surface-variant mb-1">New Users</p>
+<h4 class="text-2xl font-extrabold text-primary">1.2k</h4>
+<p class="text-[10px] text-on-surface-variant mt-2 flex items-center">
+<span class="material-symbols-outlined text-xs mr-1" data-icon="horizontal_rule">horizontal_rule</span> Stable
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- System Status Bar (Asymmetric Tonal Shift) -->
+<div class="bg-surface-container-low rounded-2xl p-8 flex items-center justify-between">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-tertiary animate-pulse"></span>
+<span class="text-sm font-bold">API Status: Operational</span>
+</div>
+<div class="h-8 w-px bg-outline-variant/30"></div>
+<div class="text-sm">
+<span class="text-on-surface-variant">Last CMS backup:</span>
+<span class="font-bold ml-1">Today, 04:00 AM</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-xs text-on-surface-variant italic">MediFlow Mag Engine v4.2.0</span>
+<button class="bg-white px-4 py-2 rounded-lg text-xs font-bold text-primary shadow-sm hover:bg-slate-50 transition-all">Support Portal</button>
+</div>
+</div>
+</main>
+</body></html>
